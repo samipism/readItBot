@@ -22,16 +22,36 @@ code {
   text-align: center;
   position: fixed;
   bottom: 3%;
-  right: 10%;
+  right: 1%;
 }
 
 .bot {
   /* position: fixed; */
   /* bottom: 15%; */
   /* right: 5%; */
-  margin: 0 10% 5% 70%;
+  position: fixed;
+  bottom: 10%;
+  right: 0%;
+  /* margin: 0 10% 5% 70%; */
   width: min-content;
 }
 .title {
   font-weight: 600;
+}
+
+/* ============ */
+.title {
+  /* padding: 2%; */
+  text-align: center;
+}
+.abstract {
+  /* margin: 1% 5%; */
+  text-align: justify;
+}
+.main-page {
+  margin: 3% 10%;
+}
+/* ============ */
+.demo {
+  /* text-align: center; */
 }
