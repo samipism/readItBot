@@ -35,12 +35,14 @@ code {
   /* margin: 0 10% 5% 70%; */
   width: min-content;
 }
-.title {
+.title-project {
   font-weight: 600;
 }
 
 /* ============ */
 .title {
+  margin-top: 3%;
+
   /* padding: 2%; */
   text-align: center;
 }
@@ -54,4 +56,24 @@ code {
 /* ============ */
 .demo {
   /* text-align: center; */
+  margin-top: 3%;
+}
+
+.input {
+  margin: 1% 0;
+}
+
+.nav {
+  display: flex;
+}
+
+.our-team {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1%;
+}
+.team-photo {
+  width: 10em;
+  height: 10em;
+  border-radius: 50% !important;
 }

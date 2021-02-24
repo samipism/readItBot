@@ -4,21 +4,31 @@ import Chatbot from "react-chatbot-kit";
 import config from "./config";
 import MessageParser from "./MessageParser";
 import ActionProvider from "./ActionProvider";
-import { Button, Fade, Navbar } from "react-bootstrap";
+import { Button, Fade, Nav, Navbar } from "react-bootstrap";
 import Demo from "./Demo";
+import Team from "./Team";
 
 function App() {
   const [open, setOpen] = useState(false);
   return (
     <div className="App">
-      <Navbar bg="dark" expand="lg" variant="dark">
-        <Navbar.Brand href="#home" className="title">
+      <Navbar bg="primary" expand="lg" variant="dark" className="nav">
+        <Navbar.Brand href="/" className="title-project">
           ReadIt
         </Navbar.Brand>
-        <Navbar.Brand>A demo of Machine Reading Comprehension.</Navbar.Brand>
+        <Nav className="mr-auto">
+          <Nav.Link href="#abstract">Abstract</Nav.Link>
+          <Nav.Link href="#demo">Demo</Nav.Link>
+          <Nav.Link href="#team">Team</Nav.Link>
+        </Nav>
+        <Navbar.Brand className="justify-content-end">
+          A demo of Machine Reading Comprehension.
+        </Navbar.Brand>
       </Navbar>
-      <div className="main-page">
-        <div className="h1 title">Abstract</div>
+      <div className="main-page ">
+        <div className="h1 title" id="abstract">
+          Abstract
+        </div>
         <div className="abstract">
           orem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat,
           est at varius imperdiet, orci mi maximus arcu, in pulvinar enim metus
@@ -62,8 +72,10 @@ function App() {
           Cras quis cursus metus. Etiam non neque eu lorem lobortis lobortis.{" "}
         </div>
         <div>
-          <div className="h1 title">Quick Demo</div>
           <Demo />
+        </div>
+        <div>
+          <Team />
         </div>
       </div>
       <>

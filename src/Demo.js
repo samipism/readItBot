@@ -22,8 +22,13 @@ const Demo = () => {
   };
   return (
     <div className="demo">
-      <label htmlFor="context">Context (Paragraph)</label>
-      <InputGroup>
+      <div className="h1 title" id="demo">
+        Quick Demo
+      </div>
+      <label htmlFor="context" className="h4">
+        Context (Paragraph)
+      </label>
+      <InputGroup className="input">
         <FormControl
           id="context"
           as="textarea"
@@ -32,28 +37,27 @@ const Demo = () => {
           onChange={e => onChangeText(e, "context")}
         />
       </InputGroup>
-      <label htmlFor="context">Question</label>
-      <InputGroup>
-        {/* <InputGroup.Prepend>
-          <InputGroup.Text>Question</InputGroup.Text>
-        </InputGroup.Prepend> */}
-
+      <label htmlFor="context" className="h4">
+        Question
+      </label>
+      <InputGroup className="input">
         <FormControl
-          //   as="text"
           value={question}
           aria-label="With textarea"
           onChange={onChangeText}
         />
       </InputGroup>
-      <div>
+      <div className="input">
         <Button variant="primary" type="submit" onClick={onAnswerClick}>
           Answer
         </Button>
       </div>
 
-      <label htmlFor="context">Answer</label>
+      <label htmlFor="context" className="h4 answer">
+        Answer
+      </label>
 
-      <InputGroup>
+      <InputGroup className="input">
         {isAnswerFetching && (
           <Spinner animation="border" role="status">
             <span className="sr-only">Loading...</span>
