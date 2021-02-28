@@ -37,25 +37,6 @@ const Team = () => {
             <div className="h5">Samip Poudel</div>
           </Card.Body>
         </div>
-        {/* </Card> */}
-        {/* <Card style={{ width: "10rem" }}>
-          <Card.Img variant="top" src={Rabin} className="team-photo" />
-          <Card.Body>
-            <Card.Title>Rabin Adhikari</Card.Title>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: "10rem" }}>
-          <Card.Img variant="top" src={Safal} className="team-photo" />
-          <Card.Body>
-            <Card.Title>Safal Thapaliya</Card.Title>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: "10rem" }}>
-          <Card.Img variant="top" src={Samip} className="team-photo" />
-          <Card.Body>
-            <Card.Title>Samip Poudel</Card.Title>
-          </Card.Body>
-        </Card> */}
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ export const getData = async (context, question) => {
   console.log(context, question);
   let data;
   try {
-    data = await fetch("http://10.100.56.190:5000/prediction", {
+    data = await fetch("http://10.100.51.150:5000/prediction", {
       method: "POST",
 
       headers: {
