@@ -17,10 +17,20 @@ const samples = {
     "The Great War, the Mahabharata, is fought at the very end of the Dwapara Yuga, the third age, just before the sinister Kali Yuga begins. Once, in the time out of mind, the Gods created the Kshatriyas to establish dharma, justice, in an anarchic world. Most royal Kshatriya bloodlines can be traced back to the Devas themselves: in the most ancient days, the Gods came freely to the earth. But in time, generations, the noble race of warrior kings had grown arrogant and greedy. By the end of the Dwapara Yuga, they had become tyrants, and were still practically invincible. Krishna, the Avatara, and his cousins, the Pandavas, were born to destroy the power of Kshatriyas of Bharatavarsha forever. This is what the Mahabharata yuddha, the war on the crack of the ages, accomplished; and thus, ushered in the Kali Yuga, modern times. By the Hindu calender, the Great War was fought some five thousand years ago.",
 };
 
+const questions = {
+  ioe:
+    "Which is the central campus of Institute Of Engineering?, When was Pulchowk Campus Established?, When will the first list of applicants be published?",
+  time:
+    "What is the length of a stadium?, Who estimated the distance around the earth?, What causes eclipses of the moon?, Who was Aristotle?, What was the distance around earth as estimated by Aristotle?, What did the Greeks know?",
+  mahabharat:
+    "What became of the Kshatriyas?, Why were the Pandavas born?, When was the Mahabharata fought?, What is The Great War?",
+};
+
 const Demo = () => {
   const [context, setContext] = useState("");
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
+  const [sample, setSample] = useState("");
   const [isAnswerFetching, setIsAnswerFetching] = useState(false);
   const onChangeText = (event, type) => {
     if (type === "context") setContext(event.target.value);
@@ -45,13 +55,17 @@ const Demo = () => {
         onSelect={(e, x) => {
           if (e === "2") {
             setContext(samples["time"]);
-          } else if (e === "3") setContext(samples["mahabharata"]);
-          else if (e === "1") {
+            setSample(questions["time"]);
+          } else if (e === "3") {
+            setContext(samples["mahabharata"]);
+            setSample(questions["mahabharat"]);
+          } else if (e === "1") {
             setContext(samples["ioe"]);
+            setSample(questions["ioe"]);
           }
         }}
       >
-        <Dropdown.Toggle variant="success" id="dropdown-basic">
+        <Dropdown.Toggle variant="primary" id="dropdown-basic">
           Sample Paragraphs
         </Dropdown.Toggle>
         <Dropdown.Menu>
@@ -76,6 +90,14 @@ const Demo = () => {
       <label htmlFor="context" className="h4">
         Question
       </label>
+      {sample === "" ? (
+        ""
+      ) : (
+        <>
+          <div>{`Some sample questions: ${sample}`}</div>
+          <Button onClick={() => setSample("")}> Reset Sample. </Button>
+        </>
+      )}
       <InputGroup className="input">
         <FormControl
           value={question}

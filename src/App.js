@@ -32,18 +32,18 @@ function App() {
         <div className="abstract">
           Machine Reading Comprehension (MRC) aims to teach machines to
           understand a text likea human and answer various questions about the
-          text by interacting the question with thecontext provided. This report
-          entitled "Machine Reading Comprehension" discusses an im-plementation
-          of a MRC system based on a Transformer model with two modules viz.
-          sketchyreading and intensive reading in the encoder, along with a
-          verifying module in the decoder.The model uses the pre-trained MRC
-          language model in the encoder. The implemented sys-tem, "ReadIt", has
-          two interfaces for user interaction: a Question/Answer Interface and
-          aChatbot, in a single web application. The system helps users to get
-          the relevant answer tothe common queries which removes the need for a
-          human to be present hyperactively. Thesystem gives a decent
-          performance with high accuracy for the task of span extraction,
-          andthis can be implemented in autonomous chatbot interfaces by making
+          text by interacting the question with the context provided. This
+          report entitled "Machine Reading Comprehension" discusses an
+          implementation of a MRC system based on a Transformer model with two
+          modules viz. sketchyreading and intensive reading in the encoder,
+          along with a verifying module in the decoder.The model uses the
+          pre-trained MRC language model in the encoder. The implemented system,
+          "ReadIt", has two interfaces for user interaction: a Question/Answer
+          Interface and a Chatbot, in a single web application. The system helps
+          users to get the relevant answer to the common queries which removes
+          the need for a human to be present hyperactively. The system gives a
+          decent performance with high accuracy for the task of span extraction,
+          and this can be implemented in autonomous chatbot interfaces by making
           necessary changes.
         </div>
         <div>
