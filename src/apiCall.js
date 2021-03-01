@@ -8,7 +8,7 @@ export const getData = async (context, question) => {
   console.log(context, question);
   let data;
   try {
-    data = await fetch("http://192.168.43.249:5000/prediction", {
+    data = await fetch("http://10.100.56.190:5000/prediction", {
       method: "POST",
 
       headers: {
@@ -45,5 +45,7 @@ export const getData = async (context, question) => {
     });
   }
   let output = await data.json();
+  if (output.prediction[`${id}`] === "")
+    return "The model didn't find the relevant answer to the question in the given context.";
   return output.prediction[`${id}`];
 };
